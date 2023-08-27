@@ -1,0 +1,42 @@
+@page
+@model SessionDetailsModel
+@{
+
+}
+<div class="table">
+    <table>
+        <h3>Speakers in Session</h3>
+        <div class="thead">
+            <thead>
+                <tr>
+                    <th>Speakers</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+        </div>
+        <div class="td">
+            <tbody>
+                @if (Model.Session.SessionSpeakers != null)
+                {
+                    @foreach (var s in Model.Session.SessionSpeakers)
+                    {
+                        <tr>
+                            <td>@s.Speaker.Name</td>
+                            <td>
+                                <a asp-page="../SpeakerProfiles/Index" asp-route-id="@s.SpeakerId">View Speaker Profile</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <h1>No Speakers Registered</h1>
+                }
+            </tbody>
+        </div>
+    </table>
+</div>
+
+<div>
+    <a class="nav-link" asp-page="./Index" asp-route-id="@Model.Session.EventId">Back to Sessions</a>
+</div>

@@ -1,0 +1,53 @@
+@page
+@model SpeakerFormCreateModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Speaker Form</h1>
+</div>
+
+<form id="CreateSpeakerForm" method="post">
+    <h2>Request a new session</h2>
+    <hr />
+    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="Form.Title" class="form-control" aria-required="true" placeholder="Lecture Title" />
+        <label asp-for="Form.Title">Lecture Title</label>
+        <span asp-validation-for="Form.Title" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Form.Description" class="form-control" aria-required="true" placeholder="Description" />
+        <label asp-for="Form.Description">Description of Lecture</label>
+        <span asp-validation-for="Form.Description" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Form.Duration" class="form-control" aria-required="true" placeholder="Lecture Duration" />
+        <label asp-for="Form.Duration">Duration</label>
+        <span asp-validation-for="Form.Duration" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Form.Keywords" class="form-control" aria-required="true" placeholder="Keywords" />
+        <label asp-for="Form.Keywords">Keywords (Seperate with commas)</label>
+        <span asp-validation-for="Form.Keywords" class="text-danger"></span>
+    </div>
+    <h5>Would you like to request any of the following equipment?</h5>
+    @foreach (var equip in Model.Equipment)
+    {
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" value="@equip.EquipmentId" name="SelectedEquipmentIds">
+            <label class="form-check-label" for="flexSwitchCheckDefault">@equip.Name</label>
+        </div>
+    }
+    <div class="form-floating mb-3">
+        <input asp-for="Form.SpeakerId" type="hidden" value="@Model.CurrentSpeaker.SpeakerId" />
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Form.Speaker" type="hidden" value="@Model.CurrentSpeaker" />
+    </div>
+
+
+    <button id="SpeakerFormSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Submit</button>
+</form>

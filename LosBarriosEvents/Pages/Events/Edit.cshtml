@@ -1,0 +1,43 @@
+@page
+@model EventEditModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Edit Events Page</h1>
+    <br>
+</div>
+
+<div class="text-center">
+    <form id="EventEditForm" method="post">
+        <h2>Edit Event</h2>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+        <div class="form-floating mb-3">
+            <input asp-for="Event.EventId" class="form-control" aria-required="true" type="hidden" />
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="Event.Name" class="form-control" autocomplete="new-name" aria-required="true"
+                placeholder="Event Name" />
+            <label asp-for="Event.Name">Event Name</label>
+            <span asp-validation-for="Event.Name" class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="Event.Time" class="form-control" type="time" autocomplete="new-DOB" aria-required="true"
+                placeholder="Time" />
+            <label asp-for="Event.Time">Time</label>
+            <span asp-validation-for="Event.Time" class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="Event.Date" class="form-control" type="date" autocomplete="username" aria-required="true"
+                placeholder="Date" />
+            <label asp-for="Event.Date">Date</label>
+            <span asp-validation-for="Event.Date" class="text-danger"></span>
+        </div>
+
+        <button id="EventEditSubmit" type="submit" class="save">Save Changes</button>
+    </form>
+
+        <a class="nav-link" asp-page="./Index">Back to Events</a>
+</div> 

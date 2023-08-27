@@ -1,0 +1,81 @@
+@page
+@model RequestInbox
+
+<h1>Select speakers to assign to this session</h1>
+
+<div class="td">
+    <table>
+        <thead>
+            <tr>
+                <th>Assigned Speakers</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var sp in @Model.Session.SessionSpeakers!)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => sp.Speaker.Name)
+                    </td>
+                    <td>
+                        <form method="post">
+                            @if (Model.CheckSpeakerAssignment(sp.SpeakerId, Model.Session.SessionId))
+                            {
+                                <button type="submit" asp-route-assignType="unassign" asp-route-sessId="@Model.Session.SessionId"
+                            asp-route-id="@sp.SpeakerId" asp-route-formId="@sp.FormIdAssigned">Un-Assign</button>
+                            }
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <br>
+
+    <h3>Pending Speaker Requests</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Duration</th>
+                <th>Status</th>
+                <th>Speaker</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var form in Model.PendingForms)
+            {
+                if (!Model.CheckSpeakerAssignment(form.SpeakerId, Model.Session.SessionId))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => form.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => form.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => form.Duration)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => form.Status)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => form.Speaker.Name)
+                        </td>
+                        <td>
+                            <form method="post">
+                                <button type="submit" asp-route-assignType="assign" asp-route-id="@form.SpeakerId"
+                            asp-route-sessId="@Model.Session.SessionId"
+                            asp-route-formId="@form.SpeakerFormId">Assign</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

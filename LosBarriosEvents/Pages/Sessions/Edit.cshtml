@@ -1,0 +1,47 @@
+@page
+@model SessionEditModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Edit Session Page</h1>
+    <br>
+</div>
+
+<div class="text-center">
+    <form id="SessionEditForm" method="post">
+        <h2>Edit Session</h2>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+        <div class="form-floating mb-3">
+            <input asp-for="Session.SessionId" class="form-control" aria-required="true" type="hidden" />
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="Session.Name" class="form-control" autocomplete="new-name" aria-required="true"
+                placeholder="Session Name" />
+            <label asp-for="Session.Name">Session Name</label>
+            <span asp-validation-for="Session.Name" class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="Session.StartTime" class="form-control" type="time" autocomplete="new-DOB" aria-required="true"
+                placeholder="Time" />
+            <label asp-for="Session.StartTime">Start Time</label>
+            <span asp-validation-for="Session.StartTime" class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="Session.EndTime" class="form-control" type="time" autocomplete="new-DOB" aria-required="true"
+                placeholder="Time" />
+            <label asp-for="Session.EndTime">End Time</label>
+            <span asp-validation-for="Session.EndTime" class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="hidden" asp-for="Session.EventId" class="form-control"/>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="hidden" asp-for="Session.Event" class="form-control"/>
+        </div>
+
+        <button id="SessionEditSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Save Changes</button>
+    </form>
+</div>

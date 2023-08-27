@@ -1,0 +1,193 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LosBarriosEvents
+build_property.RootNamespace = LosBarriosEvents
+build_property.ProjectDir = C:\Users\Juant\Documents\VSCode\CIDM4390-Spring2023-TeamBluebird\LosBarrios-Solution\LosBarriosEvents\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Juant\Documents\VSCode\CIDM4390-Spring2023-TeamBluebird\LosBarrios-Solution\LosBarriosEvents
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Areas/Identity/Pages/Account/RegisterAccountSelect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckFjY291bnRTZWxlY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Areas/Identity/Pages/Account/RegisterStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlclN0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Events/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Events/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Events/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Events/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Events/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/FeedbackForms/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVlZGJhY2tGb3Jtc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/FeedbackForms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVlZGJhY2tGb3Jtc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Sessions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Sessions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Sessions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Sessions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Sessions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Speaker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BlYWtlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/SpeakerForms/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BlYWtlckZvcm1zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/SpeakerForms/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BlYWtlckZvcm1zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/SpeakerForms/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BlYWtlckZvcm1zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/SpeakerForms/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BlYWtlckZvcm1zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/SpeakerForms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BlYWtlckZvcm1zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/SpeakerForms/RequestInbox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BlYWtlckZvcm1zXFJlcXVlc3RJbmJveC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/SpeakerProfiles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BlYWtlclByb2ZpbGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Student.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Volunteer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVm9sdW50ZWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Juant/Documents/VSCode/CIDM4390-Spring2023-TeamBluebird/LosBarrios-Solution/LosBarriosEvents/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-9x5v8hm7q5

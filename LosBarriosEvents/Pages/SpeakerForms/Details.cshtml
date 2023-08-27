@@ -1,0 +1,28 @@
+@page
+@model SpeakerFormDetailsModel
+
+<h1>Form Details</h1>
+
+<div>
+    <div><b>Title: </b>@Model.Form.Title</div>
+    <div><b>Description: </b>@Model.Form.Description</div>
+    <div><b>Duration: </b>@Model.Form.Duration</div>
+    <br>
+    <div>
+        @if (@Model.Form.SpeakerFormEquipment != null)
+        {
+            <h5>Requested Equipment</h5>
+            foreach (var eq in Model.Form.SpeakerFormEquipment)
+            {
+                <p>@eq.Equipment.Name</p>
+            }
+        }
+    </div>
+    <br>
+    <h5>Keywords</h5>
+    @foreach (var prop in Model.Form.Keywords)
+    {
+        <mark>@prop</mark>
+    }
+    </div>
+</div>

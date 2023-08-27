@@ -1,0 +1,35 @@
+@page
+@model SpeakerProfilesIndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Speaker Information </h1>
+</div>
+
+<div class="table">
+    <table>
+        <div class="th">
+            <thead>
+                <tr>
+                    <th>Speaker Name</th>
+                    <th>Bio</th>
+                </tr>
+            </thead>
+        </div>
+
+        <div class="td">
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.Speaker.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.Speaker.BIO)
+                    </td>
+                </tr>
+            </tbody>
+        </div>
+    </table>
+</div>

@@ -1,0 +1,80 @@
+@page
+@model FeedbackCreateModel
+@{
+    ViewData["Title"] = "Lecture Feedback";
+}
+
+<h1>Lecture Feedback</h1>
+
+<form method="post">
+    <div class="form-group">
+        <input asp-for="Feedback.SessionId" value="@Model.Session.SessionId" type="hidden" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Feedback.Rating" class="control-label"></label>
+        <select asp-for="Feedback.Rating" class="form-control">
+            <option value="">-- Select Rating --</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select>
+        <span asp-validation-for="Feedback.Rating" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Feedback.OverallLectureRating" class="control-label"></label>
+        <select asp-for="Feedback.OverallLectureRating" class="form-control">
+            <option value="">-- Select Rating --</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select>
+        <span asp-validation-for="Feedback.OverallLectureRating" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Feedback.SpeakerRating" class="control-label"></label>
+        <select asp-for="Feedback.SpeakerRating" class="form-control">
+            <option value="">-- Select Rating --</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select>
+        <span asp-validation-for="Feedback.SpeakerRating" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Feedback.ContentRating" class="control-label"></label>
+        <select asp-for="Feedback.ContentRating" class="form-control">
+            <option value="">-- Select Rating --</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select>
+        <span asp-validation-for="Feedback.ContentRating" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Feedback.FacilityRating" class="control-label"></label>
+        <select asp-for="Feedback.FacilityRating" class="form-control">
+            <option value="">-- Select Rating --</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select>
+        <span asp-validation-for="Feedback.FacilityRating" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Feedback.Comment" class="control-label"></label>
+        <textarea asp-for="Feedback.Comment" class="form-control"></textarea>
+        <span asp-validation-for="Feedback.Comment" class="text-danger"></span>
+    </div>
+
+    <button id="FeedbackCreateSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Leave Feedback</button>
+</form>  

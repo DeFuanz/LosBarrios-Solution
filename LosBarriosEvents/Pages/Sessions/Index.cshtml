@@ -1,0 +1,85 @@
+@page
+@model SessionIndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Event Sessions</h1>
+    <br>
+
+    @if (User.IsInRole(UserRoles.LosBarriosEventsAdministratorRole))
+    {
+        <p>
+            <a class="display-5 nav-link" asp-page="./Create" asp-route-id="@Model.eventId">Create New</a>
+        </p>
+    }
+
+    @if (User.IsInRole(UserRoles.LosBarriosEventsSpeakerRole))
+    {
+        <div>
+            <h3>Manage your speaking time requests here: <a class="display-5 nav-link" asp-page="../SpeakerForms/Index">My Session Times</a></h3>
+        </div>
+    }
+
+    <br>
+
+    <div class="table">
+        <table>
+            <div class="th">
+                <thead>
+                    <tr>
+                        <th>Session Name</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Duration</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+            </div>
+            <div class="td">
+                <tbody>
+                    @foreach (var item in Model.Sessions)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.StartTime)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EndTime)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Duration)
+                            </td>
+                            <td>
+                                @if (User.IsInRole(UserRoles.LosBarriosEventsAdministratorRole))
+                                {
+                                    <a class="tbl-link" asp-page="./Edit" asp-route-eventid="@item.SessionId"
+                                        asp-route-Sessionid="@item.SessionId">Edit</a>
+                                    <text> | </text>
+                                    <a class="tbl-link" asp-page="./Details" asp-route-id="@item.SessionId">Details</a>
+                                    <text> | </text>
+                                    <a class="tbl-link" asp-page="./Delete" asp-route-eventid="@item.SessionId"
+                                        asp-route-Sessionid="@item.SessionId">Delete</a>
+                                    <text> | </text>
+                                    <a class="tbl-link" asp-page="../SpeakerForms/RequestInbox" asp-route-id="@item.SessionId">Speakers</a>
+                                }
+                                @if (User.IsInRole(UserRoles.LosBarriosEventsStudentRole))
+                                {
+                                    <a class="tbl-link" asp-page="./Details" asp-route-id="@item.SessionId">Details</a>
+                                }
+                                @if (User.IsInRole(UserRoles.LosBarriosEventsStudentRole))
+                                {
+                                    <a class="tbl-link" asp-page="../FeedBackForms/Create" asp-route-id="@item.SessionId">Leave Feedback</a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </div>
+        </table>
+    </div>
+</div>

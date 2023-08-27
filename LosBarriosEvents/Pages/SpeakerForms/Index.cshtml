@@ -1,0 +1,70 @@
+@page
+@model SpeakerFormIndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Pending Speaker Requests</h1>
+
+    @if (User.IsInRole(UserRoles.LosBarriosEventsSpeakerRole))
+    {
+        <h3 class="display-5">Request a new Speaking Time: <a class="display-5 nav-link" asp-page="./Create">New Request</a>
+        </h3>
+    }
+
+    <div class="table">
+        <table>
+
+            <div class="th">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Duration</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+            </div>
+
+            <div class="td">
+                <tbody>
+                    @foreach (var item in Model.SpeakerForms)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Duration)
+                            </td>
+                            <td>
+                                @if (item.Keywords != null)
+                                {
+                                    @foreach (var kw in item.Keywords)
+                                    {
+                                        <mark><b>@kw</b></mark>
+                                    }
+                                }
+                            </td>
+                            @if (User.IsInRole(UserRoles.LosBarriosEventsSpeakerRole))
+                            {
+                                <td>
+                                    <a class="tbl-link" asp-page="./Edit" asp-route-id="@item.SpeakerFormId">Edit</a>
+                                    <text> | </text>
+                                    <a class="tbl-link" asp-page="./Details" asp-route-id="@item.SpeakerFormId">Details</a>
+                                    <text> | </text>
+                                    <a class="tbl-link" asp-page="./Delete" asp-route-id="@item.SpeakerFormId">Delete</a>
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </div>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,99 @@
+@page
+@model RegisterStudentModel
+
+<h3>Welcome Student, We just need a few things from you first</h3>
+<form class="registerStudentForm" method="post">
+    <div class="form-floating mb-3">
+        <input asp-for="UserName" class="form-control" autocomplete="new-name" aria-required="true"
+            placeholder="Create a username" />
+        <label asp-for="UserName">Username</label>
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="Input.FirstName" class="form-control" autocomplete="new-name" aria-required="true"
+            placeholder="First Name" />
+        <label asp-for="Input.FirstName">First Name</label>
+        <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="Input.LastName" class="form-control" autocomplete="new-name" aria-required="true"
+            placeholder="Last Name" />
+        <label asp-for="Input.LastName">Last Name</label>
+        <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="Input.Password" class="form-control" autocomplete="new-name" aria-required="true"
+            placeholder="Password" />
+        <label asp-for="Input.Password">Password</label>
+        <span asp-validation-for="Input.Password" class="text-danger"></span>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-name" aria-required="true"
+            placeholder="Confirm Password" />
+        <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="Input.SchoolName" id="school-autocomplete" class="form-control" autocomplete="off"
+            aria-required="true" placeholder="Type to search for a school" />
+        <label asp-for="Input.SchoolName">School Name</label>
+        <span asp-validation-for="Input.SchoolName" class="text-danger"></span>
+        <div id="autocomplete-school-list" class="autocomplete-items"></div>
+    </div>
+
+    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+</form>
+
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="~/lib/jquery-ajax-unobtrusive/dist/jquery.unobtrusive-ajax.min.js"></script>
+
+    <script>
+        document.getElementById("school-autocomplete").addEventListener("input", function (e) {
+            var inputValue = e.target.value;
+            closeSchoolList();
+            if (!inputValue) return;
+
+            var schools = @Html.Raw(Json.Serialize(Model.Schools));
+
+            var matchingSchools = schools.filter(function (item) {
+                var schoolInfo = item.name + ' - ' + item.district;
+                return schoolInfo.toLowerCase().includes(inputValue.toLowerCase());
+            }).slice(0, 5);
+
+            var listContainer = document.getElementById("autocomplete-school-list");
+            matchingSchools.forEach(function (item) {
+                var listItem = document.createElement("div");
+                listItem.textContent = item.name + '  -  ' + item.district;
+                listItem.addEventListener("click", function () {
+                    document.getElementById("school-autocomplete").value = item.name;
+                    closeSchoolList();
+                });
+                listContainer.appendChild(listItem);
+            });
+        });
+
+        function closeSchoolList() {
+            var listContainer = document.getElementById("autocomplete-school-list");
+            while (listContainer.firstChild) {
+                listContainer.removeChild(listContainer.firstChild);
+            }
+        }
+
+        document.addEventListener("click", function (e) {
+            if (e.target.id !== "school-autocomplete") {
+                closeSchoolList();
+            }
+        });
+    </script>
+}

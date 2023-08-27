@@ -1,0 +1,16 @@
+@page
+@model RegisterAccountSelectModel
+
+
+<h1>Account registration</h1>
+<p>Please select a user account type</p>
+<form class="SelectAccountTypeForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+    <div class="form-floating mb-3">
+        <select id="UserRoleDropDown" asp-for="SelectedUserRole"
+            asp-items="RegisterAccountSelectModel.UserRoleOptions()" class="form-control">
+            <option value="">-- Select Account Type --</option>
+        </select>
+        <span asp-validation-for="SelectedUserRole" class="text-danger"></span>
+    </div>
+    <button id="accountSelectSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Continue</button>
+</form>

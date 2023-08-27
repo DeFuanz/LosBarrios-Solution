@@ -1,0 +1,42 @@
+@page
+@model EventDetailsModel
+@{
+    ViewData["Title"] = "Event Details";
+}
+
+<div class="table">
+    <table>
+        <div class="th">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    @* <th>Description</th>
+                    <th>Location</th>
+                    <th>Max Capacity</th>
+                    <th>Registered Students</th> *@
+                </tr>
+            </thead>
+        </div>
+        <div class="td">
+            <tbody>
+                <tr>
+                    <td>@Model.Event.Name</td>
+                    <td>@Model.Event.Date</td>
+                    <td>@Model.Event.Time</td>
+                    @*
+                    <td>@Model.Event.Description</td>
+                    <td>@Model.Event.Location</td>
+                    <td>@Model.Event.MaxCapacity</td>
+                    <td>@Model.Event.EventStudents</td>
+                    *@
+                </tr>
+            </tbody>
+        </div>
+    </table>
+</div>
+<div>
+    <a class="nav-link center" asp-page="./Index">Back to Events</a>
+</div>
+

@@ -1,0 +1,27 @@
+@page
+@model FeedbackIndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Feedback</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Lecture</th>
+            <th>Rating</th>
+            <th>Comment</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var feedback in Model.Feedback)
+        {
+            <tr>
+                <td>@feedback.SessionId</td>
+                <td>@feedback.Rating</td>
+                <td>@feedback.Comment</td>
+            </tr>
+        }
+    </tbody>
+</table>

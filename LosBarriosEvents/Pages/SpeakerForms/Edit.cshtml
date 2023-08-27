@@ -1,0 +1,86 @@
+@page
+@model SpeakerFormsEditModel
+@{
+    ViewData["Title"] = "Home page";
+    int loopCount = 0;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Edit Speaker Form</h1>
+</div>
+
+<form id="SpeakerEditForm" method="post">
+    <h2>Edit Form</h2>
+    <hr />
+    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+    <input asp-for="Form.SpeakerFormId" type="hidden">
+    <div class="form-floating mb-3">
+        <input asp-for="Form.Title" class="form-control" aria-required="true" placeholder="Lecture Title" />
+        <label asp-for="Form.Title">Lecture Title</label>
+        <span asp-validation-for="Form.Title" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Form.Description" class="form-control" aria-required="true" placeholder="Description" />
+        <label asp-for="Form.Description">Description of Lecture</label>
+        <span asp-validation-for="Form.Description" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Form.Duration" class="form-control" aria-required="true" placeholder="Lecture Duration" />
+        <label asp-for="Form.Duration">Duration</label>
+        <span asp-validation-for="Form.Duration" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Form.Keywords" class="form-control" aria-required="true" placeholder="Keywords"
+            value="@Model.KeywordString" />
+        <label asp-for="Form.Keywords">Keywords (Seperate with commas)</label>
+        <span asp-validation-for="Form.Keywords" class="text-danger"></span>
+    </div>
+    <div>
+        @foreach (var eq in Model.Equipment)
+        {
+            if (Model.SelectedEquipment.Any(e => e.EquipmentId == eq.EquipmentId))
+            {
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" value="@eq.EquipmentId" name="SelectedEquipmentIds" onclick="foo()"
+                        checked>
+                    <label class="form-check-label" for="flexSwitchCheckDefault">@eq.Name</label>
+                </div>
+            }
+            else
+            {
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" value="@eq.EquipmentId"
+                        name="" onclick="foo()">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">@eq.Name</label>
+                </div>
+            }
+            loopCount++;
+        }
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Form.SpeakerId" type="hidden" />
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Form.Speaker" type="hidden" />
+    </div>
+
+
+    <button id="SpeakerFormSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Submit</button>
+</form>
+<a asp-page="./Index">Back to Forms</a>
+
+<script type="text/javascript">
+    function foo() {
+        var inputElements = document.getElementsByClassName('form-check-input');
+        for (var i = 0; inputElements[i]; ++i) {
+            if (inputElements[i].checked) {
+                inputElements[i].setAttribute("name", "SelectedEquipmentIds");
+            }
+            else
+            {
+                inputElements[i].setAttribute("name", "");
+            }
+        }
+    };
+</script>

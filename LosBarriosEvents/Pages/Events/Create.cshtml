@@ -1,0 +1,37 @@
+@page
+@model EventCreateModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Event Creation Page</h1>
+    <br>
+    <form id="EventCreateForm"  method="post">
+        <h2>Create an Event</h2>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+        <div class="form-floating mb-3">
+            <input asp-for="Event.Name" class="form-control" autocomplete="new-name" aria-required="true"
+                placeholder="Event Name" />
+            <label asp-for="Event.Name">Event Name</label>
+            <span asp-validation-for="Event.Name" class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="Event.Time" class="form-control" type="time" autocomplete="new-DOB" aria-required="true"
+                placeholder="Time" />
+            <label asp-for="Event.Time">Time</label>
+            <span asp-validation-for="Event.Time" class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="Event.Date" class="form-control" type="date" autocomplete="username" aria-required="true"
+                placeholder="Date" />
+            <label asp-for="Event.Date">Date</label>
+            <span asp-validation-for="Event.Date" class="text-danger"></span>
+        </div>
+        
+        <button id="EventCreateSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Create Event</button>
+    </form>
+</div>
+    <a asp-page="./Index">Back to Events</a>

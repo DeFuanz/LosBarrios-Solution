@@ -1,0 +1,42 @@
+@page
+@model SessionCreateModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Session Creation Page</h1>
+    <br>
+    <form id="SessionCreateForm"  method="post">
+        <h2>Create a Session</h2>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+        <div class="form-floating mb-3">
+            <input asp-for="Session.Name" class="form-control" autocomplete="new-name" aria-required="true"
+                placeholder="Session Name" />
+            <label asp-for="Session.Name">Session Name</label>
+            <span asp-validation-for="Session.Name" class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="Session.StartTime" class="form-control" type="time" autocomplete="new-startTime" aria-required="true"
+                placeholder="Time" />
+            <label asp-for="Session.StartTime">Start Time</label>
+            <span asp-validation-for="Session.StartTime" class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="Session.EndTime" class="form-control" type="time" autocomplete="new-endTime" aria-required="true"
+                placeholder="Time" />
+            <label asp-for="Session.EndTime">End Time</label>
+            <span asp-validation-for="Session.EndTime" class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="hidden" asp-route-id="@Model.Event.EventId" asp-for="Session.EventId" value="@Model.Event.EventId" />
+        </div>
+        <div class="form-floating mb-3">
+            <input type="hidden" asp-for="Session.Event" value="@Model.Event" />
+        </div>
+        
+        <button id="SessionCreateSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Create Session</button>
+    </form>
+</div>
