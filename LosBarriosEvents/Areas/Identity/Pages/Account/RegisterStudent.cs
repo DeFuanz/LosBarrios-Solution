@@ -115,6 +115,14 @@ namespace LosBarriosEvents.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    _context.Students.Add(
+                        new Student {
+                            StudentId = user.Id,
+                            firstName = Input.FirstName,
+                            lastName = Input.LastName,
+                        }
+                    );
+                    _context.SaveChanges();
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
