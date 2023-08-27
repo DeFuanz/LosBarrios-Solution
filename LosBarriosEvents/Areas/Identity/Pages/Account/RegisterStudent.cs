@@ -57,6 +57,12 @@ namespace LosBarriosEvents.Areas.Identity.Pages.Account
         [Display(Name = "UserName")]
         public required string UserName { get; set; }
 
+        [BindProperty]
+        [Required]
+        [PageRemote(ErrorMessage = "Please search a select a school from dropdown", AdditionalFields = "__RequestVerificationToken",
+        HttpMethod = "post", PageHandler = "ValidateSchool")]
+        public required string SchoolName { get; set; }
+
         public class InputModel
         {
 
@@ -82,7 +88,6 @@ namespace LosBarriosEvents.Areas.Identity.Pages.Account
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public required string ConfirmPassword { get; set; }
 
-            public required string SchoolName { get; set; }
         }
 
         public List<School> Schools { get; set; }
@@ -96,13 +101,6 @@ namespace LosBarriosEvents.Areas.Identity.Pages.Account
         {
             if (ModelState.IsValid)
             {
-                bool UserNameTaken = _userManager.Users.Any(u => u.UserName == UserName);
-
-                if (UserNameTaken)
-                {
-                    return Page();
-                }
-
                 _logger.LogWarning("Model is valid");
                 var user = CreateUser();
 
@@ -116,7 +114,8 @@ namespace LosBarriosEvents.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _context.Students.Add(
-                        new Student {
+                        new Student
+                        {
                             StudentId = user.Id,
                             firstName = Input.FirstName,
                             lastName = Input.LastName,
@@ -222,6 +221,13 @@ namespace LosBarriosEvents.Areas.Identity.Pages.Account
             _logger.LogWarning("Request sent");
             var isAvailable = !_context.Users.Where(u => u.UserName.ToLower() == UserName.ToLower()).Any();
             return new JsonResult(isAvailable);
+        }
+
+        public JsonResult OnPostValidateSchool()
+        {
+            _logger.LogWarning("Request sent");
+            var SchoolValid = _context.Schools.Where(s => s.Name.ToLower() == SchoolName.ToLower()).Any();
+            return new JsonResult(SchoolValid);
         }
     }
 }
